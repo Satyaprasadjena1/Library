@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chat-home.css">
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Discussion</title>
+
+</head>
+<!--body starts-->
+
+<body onload="myFunction1();">
+    <!--main container chat starts-->
+    <div class="container-fluid">
+        <!--profile pic of main chat-->
+        <img class="prof-pic" src="image/party.png">
+        <!--dropdown button-->
+        <div class="dropdown"><button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SANAT</button>
+
+            <!-- dropdown content-->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">logout</a>
+            </div>
+        </div>
+        <!--main row-->
+        <div class="row">
+            <!-- tab section-->
+            <div class="col-lg-2 ">
+                <!-- main tab-->
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true" style="">search friends</a>
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true" style="margin-top:
+                                50px;">Chats</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                        aria-controls="v-pills-profile" aria-selected="false">New Group</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                        aria-controls="v-pills-messages" aria-selected="false">Poll</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                </div>
+            </div>
+            <!--right side content -->
+            <div class="col-lg-10 ">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <div class="container-fluid" style="height: 84vh;width: 82.5vw;background-color: #f4f4fb;">
+                            <div class="row">
+                                <div class="col-lg-4 chat" id="mchat"
+                                    style=" background-color: #f4f4fb;box-shadow: inset -3px -5px px #bababd;height: 100vh;margin-top: -120px;">
+                                    <div class="mt-5 ml-5">
+                                        <h2>Chat</h2>
+                                    </div>
+                                    <!-- chat search-->
+                                    <div class="chat-search">
+                                        <input type="text" placeholder="Search">
+                                        <!-- contains all chats-->
+                                        <div id="scroll"
+                                            style="background-color: #f4f4fb;overflow-y: scroll;height: 80vh;margin-top: -10px;">
+                                            <!--individual chat 1-->
+                                            <div class="col-lg-10 bg-light  chtbox text-light ml-5 mb-2 "
+                                                onclick="myFunction()">
+                                                <div class="row">
+                                                    <!--chat contact's profile pic-->
+                                                    <div class="col-lg-2">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                    </div>
+                                                    <!--chat content-->
+                                                    <div class="col-lg-6 mt-4">
+                                                        <span class="text-dark chat-name1">Name </span><br>
+                                                        <small class="text-dark chat-name1">last message</small>
+                                                    </div>
+                                                    <!--chat notification -->
+                                                    <div class="col-lg-4 mt-3 ">
+                                                        <small class="text-dark mb-3">Last Seen</small><br>
+                                                        <h6>1</h6>
+                                                        <div class="drop-container">
+                                                            <div class="drop"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--individual chat 2-->
+                                            <div class="col-lg-10 bg-light  chtbox text-light ml-5 mb-2 "
+                                                onclick="myFunction()">
+                                                <div class="row">
+                                                    <!--chat contact's profile pic-->
+                                                    <div class="col-lg-2">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                    </div>
+                                                    <!--chat content-->
+                                                    <div class="col-lg-6 mt-4">
+                                                        <span class="text-dark chat-name1">Name </span><br>
+                                                        <small class="text-dark chat-name1">last message</small>
+                                                    </div>
+                                                    <!--chat notification -->
+                                                    <div class="col-lg-4 mt-3 ">
+                                                        <small class="text-dark mb-3">Last Seen</small><br>
+                                                        <h6>1</h6>
+                                                        <div class="drop-container">
+                                                            <div class="drop"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--individual chat 3-->
+                                            <div class="col-lg-10 bg-light  chtbox text-light ml-5 mb-2 "
+                                                onclick="myFunction()">
+                                                <div class="row">
+                                                    <!--chat contact's profile pic-->
+                                                    <div class="col-lg-2">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                    </div>
+                                                    <!--chat content-->
+                                                    <div class="col-lg-6 mt-4">
+                                                        <span class="text-dark chat-name1">Name </span><br>
+                                                        <small class="text-dark chat-name1">last message</small>
+                                                    </div>
+                                                    <!--chat notification -->
+                                                    <div class="col-lg-4 mt-3 ">
+                                                        <small class="text-dark mb-3">Last Seen</small><br>
+                                                        <h6>1</h6>
+                                                        <div class="drop-container">
+                                                            <div class="drop"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--individual chat 4-->
+                                            <div class="col-lg-10 bg-light  chtbox text-light ml-5 mb-2 "
+                                                onclick="myFunction()">
+                                                <div class="row">
+                                                    <!--chat contact's profile pic-->
+                                                    <div class="col-lg-2">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                    </div>
+                                                    <!--chat content-->
+                                                    <div class="col-lg-6 mt-4">
+                                                        <span class="text-dark chat-name1">Name </span><br>
+                                                        <small class="text-dark chat-name1">last message</small>
+                                                    </div>
+                                                    <!--chat notification -->
+                                                    <div class="col-lg-4 mt-3 ">
+                                                        <small class="text-dark mb-3">Last Seen</small><br>
+                                                        <h6>1</h6>
+                                                        <div class="drop-container">
+                                                            <div class="drop"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--individual chat 5-->
+                                            <div class="col-lg-10 bg-light  chtbox text-light ml-5 mb-2 "
+                                                onclick="myFunction()">
+                                                <div class="row">
+                                                    <!--chat contact's profile pic-->
+                                                    <div class="col-lg-2">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                    </div>
+                                                    <!--chat content-->
+                                                    <div class="col-lg-6 mt-4">
+                                                        <span class="text-dark chat-name1">Name </span><br>
+                                                        <small class="text-dark chat-name1">last message</small>
+                                                    </div>
+                                                    <!--chat notification -->
+                                                    <div class="col-lg-4 mt-3 ">
+                                                        <small class="text-dark mb-3">Last Seen</small><br>
+                                                        <h6>1</h6>
+                                                        <div class="drop-container">
+                                                            <div class="drop"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--individual chat 6-->
+                                            <div class="col-lg-10 bg-light  chtbox text-light ml-5 mb-2 "
+                                                onclick="myFunction()">
+                                                <div class="row">
+                                                    <!--chat contact's profile pic-->
+                                                    <div class="col-lg-2">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                    </div>
+                                                    <!--chat content-->
+                                                    <div class="col-lg-6 mt-4">
+                                                        <span class="text-dark chat-name1">Name </span><br>
+                                                        <small class="text-dark chat-name1">last message</small>
+                                                    </div>
+                                                    <!--chat notification -->
+                                                    <div class="col-lg-4 mt-3 ">
+                                                        <small class="text-dark mb-3">Last Seen</small><br>
+                                                        <h6>1</h6>
+                                                        <div class="drop-container">
+                                                            <div class="drop"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--individual chat 7-->
+                                            <div class="col-lg-10 bg-light  chtbox text-light ml-5 mb-2 "
+                                                onclick="myFunction()">
+                                                <div class="row">
+                                                    <!--chat contact's profile pic-->
+                                                    <div class="col-lg-2">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                    </div>
+                                                    <!--chat content-->
+                                                    <div class="col-lg-6 mt-4">
+                                                        <span class="text-dark chat-name1">Name </span><br>
+                                                        <small class="text-dark chat-name1">last message</small>
+                                                    </div>
+                                                    <!--chat notification -->
+                                                    <div class="col-lg-4 mt-3 ">
+                                                        <small class="text-dark mb-3">Last Seen</small><br>
+                                                        <h6>1</h6>
+                                                        <div class="drop-container">
+                                                            <div class="drop"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- user message starts -->
+                                <div class="col-lg-8 message-box">
+                                    <div id="myDIV" style="height: 96.3%;width: 100%;">
+                                        <div class="row rw-1">
+                                            <!-- chat status-->
+                                            Status: <p id="status-chat">Online<img class="status-icon"
+                                                    src="image/status-online.png"></p><i
+                                                class="fas fa-bell mt-1 ml-4"></i>
+                                        </div>
+                                        <div class="row rw-2">
+                                            <!--username and last seen-->
+                                            <p class="ml-3"><b>User Name:</b><br><small>Last Seen</small></p>
+                                        </div>
+                                        <!--chat container-->
+                                        <div style="overflow-y: scroll;height: 76%;width: 95%;margin-left: 25px;"
+                                            id="scroll1">
+                                            <!--reciever text-->
+                                            <div id="reciever-row" class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <div class="image-txt-container">
+                                                            <img class="chat-prof-pic" src="image/party.png">
+                                                            <p class="reciever-text">
+                                                                Text hereNov 26, 2019 - The -webkit-scrollbar
+                                                                family of
+                                                                properties consists of seven different
+                                                                pseudo-elements
+                                                                that, together, comprise a full scrollbar UI
+                                                                element:
+                                                                ::-webkit-scrollbar addresses the background of
+                                                                the bar
+                                                                itself. ::-webkit-scrollbar-button addresses the
+                                                                directional buttons on the scrollbar.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--sender text-->
+                                                <div id="sender-row" class="row">
+                                                    <div class="col-lg-5 offset-lg-7">
+                                                        <div class="image-txt-container1">
+                                                            <img class="chat-prof-pic" src="image/party.png">
+                                                            <p class="sender-text">
+                                                                Text hereNov 26, 2019 - The -webkit-scrollbar
+                                                                family of
+                                                                properties consists of seven different
+                                                                pseudo-elements
+                                                                that, together, comprise a full scrollbar UI
+                                                                element:
+                                                                ::-webkit-scrollbar addresses the background of
+                                                                the bar
+                                                                itself. ::-webkit-scrollbar-button addresses the
+                                                                directional buttons on the scrollbar.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="sender-row" class="row">
+                                                    <div class="col-lg-5 offset-lg-7">
+                                                        <div class="image-txt-container1">
+                                                            <img class="chat-prof-pic" src="image/party.png">
+                                                            <p class="sender-text">
+                                                                Text hereNov 26, 2019 - The -webkit-scrollbar
+                                                                family
+                                                                of
+                                                                properties consists of seven different
+                                                                pseudo-elements
+                                                                that, together, comprise a full scrollbar UI
+                                                                element:
+                                                                ::-webkit-scrollbar addresses the background of
+                                                                the
+                                                                bar
+                                                                itself. ::-webkit-scrollbar-button addresses the
+                                                                directional buttons on the scrollbar.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="sender-row" class="row">
+                                                    <div class="col-lg-5 offset-lg-7">
+                                                        <div class="image-txt-container1">
+                                                            <img class="chat-prof-pic" src="image/party.png">
+                                                            <p class="sender-text">
+                                                                Text hereNov 26, 2019 - The -webkit-scrollbar
+                                                                family
+                                                                of
+                                                                properties consists of seven different
+                                                                pseudo-elements
+                                                                that, together, comprise a full scrollbar UI
+                                                                element:
+                                                                ::-webkit-scrollbar addresses the background of
+                                                                the
+                                                                bar
+                                                                itself. ::-webkit-scrollbar-button addresses the
+                                                                directional buttons on the scrollbar.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="sender-row" class="row">
+                                                    <div class="col-lg-5 offset-lg-7">
+                                                        <div class="image-txt-container1">
+                                                            <img class="chat-prof-pic" src="image/party.png">
+                                                            <p class="sender-text">
+                                                                Text hereNov 26, 2019 - The -webkit-scrollbar
+                                                                family of
+                                                                properties consists of seven different
+                                                                pseudo-elements
+                                                                that, together, comprise a full scrollbar UI
+                                                                element:
+                                                                ::-webkit-scrollbar addresses the background of
+                                                                the bar
+                                                                itself. ::-webkit-scrollbar-button addresses the
+                                                                directional buttons on the scrollbar.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-5">
+                                                    <div class="image-txt-container">
+                                                        <img class="chat-prof-pic" src="image/party.png">
+                                                        <p class="reciever-text">
+                                                            Text hereNov 26, 2019 - The -webkit-scrollbar family
+                                                            of
+                                                            properties consists of seven different
+                                                            pseudo-elements
+                                                            that, together, comprise a full scrollbar UI
+                                                            element:
+                                                            ::-webkit-scrollbar addresses the background of the
+                                                            bar
+                                                            itself. ::-webkit-scrollbar-button addresses the
+                                                            directional buttons on the scrollbar.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div id="sender-row" class="row">
+                                                    <div class="col-lg-5 offset-lg-7">
+                                                        <div class="image-txt-container1">
+                                                            <img class="chat-prof-pic" src="image/party.png">
+                                                            <p class="sender-text">
+                                                                Text hereNov 26, 2019 - The -webkit-scrollbar
+                                                                family of
+                                                                properties consists of seven different
+                                                                pseudo-elements
+                                                                that, together, comprise a full scrollbar UI
+                                                                element:
+                                                                ::-webkit-scrollbar addresses the background of
+                                                                the bar
+                                                                itself. ::-webkit-scrollbar-button addresses the
+                                                                directional buttons on the scrollbar.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="sender-row" class="row">
+                                                    <div class="col-lg-5 offset-lg-7">
+                                                        <div class="image-txt-container1">
+                                                            <img class="chat-prof-pic" src="image/party.png">
+                                                            <p class="sender-text">
+                                                                Text hereNov 26, 2019 - The -webkit-scrollbar
+                                                                family of
+                                                                properties consists of seven different
+                                                                pseudo-elements
+                                                                that, together, comprise a full scrollbar UI
+                                                                element:
+                                                                ::-webkit-scrollbar addresses the background
+                                                                of the bar
+                                                                itself. ::-webkit-scrollbar-button addresses
+                                                                the
+                                                                directional buttons on the scrollbar.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--send messages bar -->
+                                        <div class="row rw-5 text-dark">
+                                            <input type="text" class="txt-msg mt-2 ml-2"
+                                                placeholder=" &#128540; Enter Your Text ">
+                                            <button class="send-icon"><i class="fab fa-telegram-plane"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <!-- New Group Content-->
+                        <div class="row">
+                            <div class="col-lg-4 chat"
+                                style=" background-color: #f4f4fb;box-shadow: inset -3px -5px px #bababd;height: 100vh;margin-top: -120px;">
+                                <div class="mt-5 ml-5">
+                                    <h2>New Group</h2>
+                                </div>
+                                <!-- chat search-->
+                                <div class="chat-search">
+                                    <input type="text" placeholder="Search">
+                                    <!-- contains all chats-->
+                                    <div id="scroll"
+                                        style="background-color: #f4f4fb;overflow-y: scroll;height: 80vh;margin-top: -10px;">
+                                        <!--contact name 1-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 2-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 3-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 4-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 5-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 6-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 7-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 8-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 9-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--contact name 10-->
+                                        <div class="col-lg-10 bg-light  contact-box text-light ml-5 mb-2 "
+                                            onclick="myFunction()">
+                                            <div class="row">
+                                                <!--chat contact's profile pic-->
+                                                <div class="col-lg-2">
+                                                    <img class="chat-prof-pic mt-2" src="image/party.png">
+                                                </div>
+                                                <!--chat content-->
+                                                <div class="col-lg-6 mt-3">
+                                                    <span class="text-dark chat-name1">Name </span><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">
+                        <!-- Poll -->
+                        <div class="container-fluid"
+                            style="background-color: #f4f4fb;width: 100vw;height: 100vh;margin-top: -9.4%;">
+                            <div id="opt">
+                                <textarea name="editor" class="mt-5" id="editor" cols="80" rows="10"
+                                    placeholder="Enter Your question for poll">
+                                </textarea><br /><br />
+                                <input name="optn" id="optn" placeholder="Enter Option"
+                                    class="optn form-control-lg ml-5"> &nbsp;
+                                <button class="btn btn-outline-primary" onClick="addoption();" name="add">Add More
+                                    Options</button><br /><br />
+                            </div>
+                            <!-- Button for popup -->
+                            <a class="alert alert-success ml-5" style="text-decoration: none" href="#popup1">Create
+                                poll</a>
+                            <!--popup contents-->
+                            <div id="popup1" class="overlay">
+                                <div class="popup">
+                                    <h2>Poll</h2>
+                                    <a class="close" href="#">&times;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">
+                        <!-- settings content -->
+                        <div class="container-fluid"
+                            style="height: 100vh;width: 100vw;background-color: #f4f4fb;margin-top: -9.3%;">
+                            <div class="row">
+                                <div class="col-lg-3 settng-tab">
+                                    <a href="discussion.html"
+                                        style='font-size:25px;font-weight:bold;color: rgb(39, 7, 116);text-decoration: none;'>&#8592;</a>
+                                    &nbsp;<center><span style='font-size: 25px;color: rgb(166, 138, 243);margin-top:
+                                                20px;margin-top: 1rem;'>Settings</span></center>
+                                    <center>
+                                        <div class="hvrbox">
+                                            <a class="layer" href="edit.php"><img src="image/party.png"
+                                                    alt="Profile-picture" class="hvrbox-layer_bottom "></a>
+                                            <div class="hvrbox-layer_top">
+                                                <div class="hvrbox-text">Change Picture</div>
+                                            </div>
+                                        </div>
+                                    </center>
+
+                                    <h3 class="d-block text-center mt-3" style="font-size: 18px;">SANAT</h3>
+
+
+                                    <div class="nav flex-column mt-3" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <center><a class="nav-link" id="v-pills-home-tab" data-toggle="pill"
+                                                href="#v-pills-settings" role="tab" aria-controls="v-pills-home"
+                                                aria-selected="true"><button class="openbtn" onclick="openNav()">
+                                                    Notification</button></a>
+                                            <a class="nav-link mr-4" id="v-pills-messages-tab" data-toggle="pill"
+                                                href="#v-pills-settings" role="tab" aria-controls="v-pills-messages"
+                                                aria-selected="false"><button class="openbtn" onclick="openNav1()">
+                                                    Blocked</button></a>
+                                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                                href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                                aria-selected="false"><button class="openbtn"
+                                                    onclick="openNav2()">Help</button></a>
+                                        </center>
+                                    </div>
+
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                            aria-labelledby="v-pills-home-tab">
+
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                            aria-labelledby="v-pills-profile-tab">...</div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">...</div>
+                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                            aria-labelledby="v-pills-settings-tab">...</div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-9 settng-backgrnd">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--main container ends-->
+
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn    " onclick="closeNav()">&#8592;</a>
+        <center>
+            <input type="checkbox" class="sounds">sounds<br><br>
+            <input type="checkbox" class="sounds">Desktop Alert<br><br>
+            <input type="checkbox" class="sounds">Show Preview<br><br>
+            <select name="" id="">
+                <option>Turn Off Alerts and sounds for...</option>
+                <option>1 Hr</option>
+                <option>1 Day</option>
+                <option>1 Week</option>
+            </select>
+        </center>
+    </div>
+    <di v id="mySidepanel1" class="sidepanel">
+        <center>
+            <a href="javascript:void(0)" class="closebtn " onclick="closeNav1()">&#8592;</a>
+            <a href="#">Blocked contacts</a>
+        </center>
+        </div>
+        <div id="mySidepanel2" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn " onclick="closeNav2()">&#8592;</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Terms And Private Policy</a>
+        </div>
+
+
+        <!--javascript starts-->
+        <script>
+            function addoption() {
+                var x = document.getElementById("opt")
+                var y = document.createElement("INPUT");
+                document.getElementById('y.setAttribute("type", "text")');
+                document.body.appendChild(x);
+            }
+        </script>
+        <script src="ckeditor5-build-classic/ckeditor.js">
+        </script>
+        <script>
+            ClassicEditor.create(document.getElementById('editor'));
+
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+
+                x.style.display = "block";
+
+            }
+
+            function myFunction1() {
+                var x = document.getElementById("myDIV");
+                x.style.display = "none";
+
+            }
+
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "387px";
+
+            }
+
+            function closeNav() {
+                document.getElementById("mySidepanel").style.width = "0";
+            }
+
+            function openNav1() {
+                document.getElementById("mySidepanel1").style.width = "387px";
+            }
+
+            function closeNav1() {
+                document.getElementById("mySidepanel1").style.width = "0";
+            }
+
+            function openNav2() {
+                document.getElementById("mySidepanel2").style.width = "387px";
+            }
+
+            function closeNav2() {
+                document.getElementById("mySidepanel2").style.width = "0";
+            }
+            /*javascript ends*/
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        </script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
+</body>
+<!-- body ends-->
+
+</html>

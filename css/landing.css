@@ -1,0 +1,137 @@
+body {
+	background-color: #e3e3ff;
+	font-family: 'Poppins', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+	.ph-pos1 {
+		position: fixed;
+		top: 8vh;
+		left: 0;
+		z-index: 1000;
+	}
+
+	.ph-pos2 {
+		position: absolute;
+		top: 30vh;
+		left: 17vw;
+	}
+}
+
+.dropdown-item {
+	margin-left: 20px;
+}
+
+.bod-1 {
+	margin-top: 50px;
+}
+
+.words-1 {
+	margin-top: 100px;
+}
+
+:hover.nav-item {
+	color: #000000;
+}
+
+.navbar-nav a {
+	color: #ffffff;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-left: 60px;
+	text-decoration: none;
+}
+
+.navbar-nav a:focus {
+	color: #ded9f3;
+	text-decoration: none;
+	font-weight: 500;
+	outline: none;
+}
+
+.collapse {
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+input:focus {
+	outline: none;
+	text-indent: 40px;
+}
+
+.caro {
+	position: relative;
+	display: inline-block;
+	margin-top: -4px;
+	margin-left: 20px;
+	width: 99%;
+}
+
+.backg {
+	background-image: url("../image/imagehome.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 101% 90%;
+	height: 85vh;
+}
+
+.navbar {
+	background: linear-gradient(to right, #8f1cfd, #8d15fe, #8d15fe);
+	color: white;
+}
+
+.btn.getstarted {
+	color: white;
+	margin-top: 15%;
+	background-color: #eb3477;
+	border-radius: 5px;
+	width: 150px;
+	height: 50px;
+}
+
+#next {
+	height: 100vh;
+	width: 100%;
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+	width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #b86cff, #8d15fe, #8d15fe);
+	border-radius: 50px;
+	outline: 1px solid #8f1cfd;
+}
+
+:hover body::-webkit-scrollbar {
+	background-color: #aa5ef174;
+}
+
+:hover body::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #a45de7, #8212eb, #8013e6);
+	border-radius: 50px;
+}
+
+.dwn {
+	margin-top: 15%;
+	text-shadow: 1px 1px 4px #c2c2f8;
+}
+
+.btn.rdmore {
+	background-color: #c2c2f8;
+}
+
+.row {
+	height: 360px;
+	vertical-align: middle;
+}
+
+.row:hover {
+	opacity: 0.97;
+}
